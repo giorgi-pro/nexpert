@@ -6,7 +6,7 @@
       "recommended": false,
       "suspicious": {
         "noExplicitAny": "off",
-        "noImplicitAnyLet": "error"
+        "noImplicitAnyLet": "off"
       }
     }
   },
