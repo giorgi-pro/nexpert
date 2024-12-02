@@ -27,7 +27,9 @@
 		"id": "ID",
 		"fullName": "Full Name",
 		"email": "Email",
-		"createdAt": "Created At"
+		"createdAt": "Created At",
+		"actions": "Actions",
+		"successDeleting": "User deleted successfully"
 	},
 	"CreateUser": {
 		"title": "Create New User",

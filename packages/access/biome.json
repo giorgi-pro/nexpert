@@ -1,22 +1,51 @@
 {
-	"extends": ["@repo/env/biome"],
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": false,
-			"suspicious": {
-				"noExplicitAny": "off",
-				"noImplicitAnyLet": "error"
-			}
-		},
-		"ignore": [
-			"dist",
-			"node_modules",
-			"*.json",
-			"coverage"
-		]
-	},
-	"formatter": {
-		"ignore": []
-	}
+  "extends": ["@repo/env/biome"],
+  "formatter": {
+    "enabled": true,
+    "ignore": [
+      "**/*.json",
+      "**/dist/**",
+      "**/.next/**",
+      "**/storybook-static/**",
+      "**/coverage-storybook/**",
+      "**/scripts/**",
+      "**/google/"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "recommended": false,
+      "all": false,
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noImplicitAnyLet": "off"
+      }
+    },
+    "ignore": [
+      ".lintstagedrc.js",
+      "dist/**",
+      "node_modules/**",
+      "**/*.json",
+      "coverage",
+      "vitest.config.ts",
+      "**/mockServiceWorker.js",
+      "vitest.config.unit.ts",
+      "**/*.test.tsx.snap",
+      "**/dist/**",
+      "**/.next/**",
+      "**/storybook-static/**",
+      "**/coverage-storybook/**",
+      "**/scripts/**",
+      "**/playwright-report/**",
+      "**/postcss.config.js",
+      "**/tailwind.config.js",
+      "**/babel.config.js",
+      "**/next.config.js",
+      "**/graphql.config.js",
+      "packages/alpheya-configs/alpheya-tailwind-config/**/*.js"
+    ]
+  },
+  "javascript": {
+    "globals": ["React"]
+  }
 }

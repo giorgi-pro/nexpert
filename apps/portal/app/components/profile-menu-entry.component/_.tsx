@@ -8,7 +8,7 @@ import { toast } from "react-hot-toast"
 import { useRouter, usePathname } from "next/navigation"
 import { useTranslations } from "next-intl"
 import { delay, clsx } from "@repo/ui/helpers"
-import LoadingButtonComponent from "@repo/ui/components/loading-button.component"
+import LoadingButtonComponent from "@repo/ui/components/action-button.component"
 
 interface ProfileMenuEntryProps {
   email: string

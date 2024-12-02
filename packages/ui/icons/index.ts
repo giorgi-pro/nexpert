@@ -1,4 +1,7 @@
-export { default as SearchIcon } from "./search.icon";
-export { default as EmailIcon } from "./email.icon";
-export { default as LoadingIcon } from "./loading.icon";
-export { default as ProfileIcon } from "./profile.icon";
+export { default as SearchIcon } from "./search.icon"
+export { default as EmailIcon } from "./email.icon"
+export { default as LoadingIcon } from "./loading.icon"
+export { default as ProfileIcon } from "./profile.icon"
+export { default as TrashIcon } from "./trash.icon"
+export { default as EditIcon } from "./edit.icon"
+export { default as CloseIcon } from "./close.icon"

@@ -1,14 +1,44 @@
-import { getActiveUsers } from "@repo/database/use-cases/get-active-users.use-case"
+"use client"
+
 import Link from "next/link"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 import moment from "moment"
 import { DATE_FORMAT } from "@repo/ui/constants/formats"
-import { withPermission } from "@repo/access/server"
+import { withPermission } from "@repo/access/client"
+import { EditIcon, TrashIcon } from "@repo/ui/icons"
+import LoadingButtonComponent from "@repo/ui/components/action-button.component"
+import DialogComponent from "@repo/ui/components/dialog.component"
+import { useRef, useState } from "react"
+import { useServerAction } from "@repo/ui/hooks/use-server-action"
+import useSingleEffect from "@repo/ui/hooks/use-single-effect.hook"
+import getActiveUsers from "~/actions/get-active-users.action"
+import deleteUserAction from "~/actions/delete-user.action"
+import toast from "react-hot-toast"
 
-async function UsersPage() {
-  const users = await getActiveUsers()
+function UsersPage() {
+  const [users, setUsers] = useState<Awaited<ReturnType<typeof getActiveUsers>>>([])
+  const selectedUser = useRef<string | null>(null)
 
-  const t = await getTranslations("Users")
+  const { callAction: callGetActiveUsers } = useServerAction(getActiveUsers, {
+    onSuccess(data) {
+      setUsers(data)
+    },
+  })
+
+  const { callAction: callDeleteUser, isPending: isDeletingUser } = useServerAction(deleteUserAction, {
+    onSuccess() {
+      toast.success(t("successDeleting"))
+      setShowDialog(false)
+    },
+  })
+
+  useSingleEffect(() => {
+    callGetActiveUsers()
+  }, [], [])
+
+  const t = useTranslations("Users")
+
+  const [showDialog, setShowDialog] = useState(false)
 
   return (
     <div className="p-4">
@@ -26,6 +56,7 @@ async function UsersPage() {
               <th>{t("fullName")}</th>
               <th>{t("email")}</th>
               <th>{t("createdAt")}</th>
+              <th>{t("actions")}</th>
             </tr>
           </thead>
           <tbody>
@@ -37,11 +68,39 @@ async function UsersPage() {
                 </td>
                 <td>{user.email}</td>
                 <td>{moment(user.createdAt).format(DATE_FORMAT)}</td>
+                <td>
+                  <div className="flex gap-2">
+                    <LoadingButtonComponent className="btn-warning" isLoading={false}>
+                      <EditIcon />
+                    </LoadingButtonComponent>
+                    <LoadingButtonComponent
+                      className="btn-error"
+                      onClick={() => {
+                        selectedUser.current = user.id
+                        setShowDialog(true)
+                      }}
+                      isLoading={isDeletingUser}
+                    >
+                      <TrashIcon />
+                    </LoadingButtonComponent>
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <DialogComponent
+        title="Are you sure you want to delete this user?"
+        content="This action cannot be undone."
+        show={showDialog}
+        onConfirm={() => {
+          if (selectedUser.current) {
+            callDeleteUser(selectedUser.current)
+          }
+        }}
+        onCancel={() => setShowDialog(false)}
+      />
     </div>
   )
 }

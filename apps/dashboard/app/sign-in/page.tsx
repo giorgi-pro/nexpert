@@ -13,7 +13,7 @@ import { useSearchParams, useRouter } from "next/navigation"
 import { signInCodeSchema } from "./schemas"
 import { signIn } from "next-auth/react"
 import useSingleEffect from "@repo/ui/hooks/use-single-effect.hook"
-import LoadingButton from "@repo/ui/components/loading-button.component"
+import LoadingButton from "@repo/ui/components/action-button.component"
 // import useLog from "@repo/ui/hooks/use-log.hook";
 
 export default function SignInPage() {

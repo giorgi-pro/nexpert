@@ -6,7 +6,7 @@ import {clsx} from "../../helpers";
 
 export type LoadingButtonComponentProps =
 	ButtonHTMLAttributes<HTMLButtonElement> & {
-		isLoading: boolean;
+		isLoading?: boolean;
 	};
 
 const LoadingButtonComponent = forwardRef<
