@@ -1,0 +1,12 @@
+{
+  "extends": ["@repo/env/biome"],
+  "linter": {
+    "rules": {
+      "recommended": false
+    },
+    "ignore": ["dist", "node_modules", "coverage", ".turbo", "data", ".vscode", ".husky"]
+  },
+  "formatter": {
+    "ignore": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "extends": ["@repo/env/biome"],
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noImplicitAnyLet": "error"
+      }
+    }
+  },
+  "formatter": {
+    "ignore": []
+  }
+}

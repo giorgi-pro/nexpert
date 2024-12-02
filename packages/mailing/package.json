@@ -1,0 +1,19 @@
+{
+	"name": "@repo/mailing",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@repo/config": "*",
+		"@repo/logging": "*",
+		"nodemailer": "^6.9.16"
+	},
+	"devDependencies": {
+		"@types/nodemailer": "^6.4.17"
+	}
+}

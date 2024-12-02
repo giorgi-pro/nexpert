@@ -1,0 +1,12 @@
+{
+  "name": "@repo/access",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@repo/env": "*",
+    "@repo/i18n": "*",
+    "next-auth": "^4.24.10",
+    "server-only": "^0.0.1"
+  }
+}

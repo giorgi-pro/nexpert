@@ -1,0 +1,37 @@
+{
+  "name": "portal",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
+  },
+  "dependencies": {
+    "@repo/config": "*",
+    "@repo/logging": "*",
+    "@repo/ui": "*",
+    "@repo/i18n": "*",
+    "next": "15.0.3",
+    "next-auth": "^4.24.10",
+    "next-intl": "^3.25.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-hook-form": "^7.53.2",
+    "react-hot-toast": "^2.4.1",
+    "tailwindcss": "^3.4.15"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^20",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "daisyui": "^4.12.14",
+    "typescript": "5.5.4"
+  }
+}

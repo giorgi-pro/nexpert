@@ -1,0 +1,14 @@
+**/node_modules
+node_modules
+**/.turbo
+.turbo
+**/.vercel
+.vercel
+**/dist
+dist
+**/coverage
+coverage-temp
+**/*.test.ts
+**/*.spec.ts
+Dockerfile
+!**/.version

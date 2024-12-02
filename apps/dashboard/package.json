@@ -1,0 +1,47 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "@repo/config": "*",
+    "@repo/i18n": "*",
+    "@repo/logging": "*",
+    "@repo/mailing": "*",
+    "@repo/access": "*",
+    "@repo/ui": "*",
+    "@repo/env": "*",
+    "jsonwebtoken": "^9.0.2",
+    "next": "15.0.3",
+    "next-auth": "^4.24.10",
+    "next-intl": "^3.25.3",
+    "next-secure-headers": "^2.2.0",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-hook-form": "^7.53.2",
+    "react-hot-toast": "^2.4.1",
+    "server-only": "^0.0.1",
+    "tailwindcss": "^3.4.15",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^20",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "daisyui": "^4.12.14",
+    "typescript": "5.5.4"
+  }
+}

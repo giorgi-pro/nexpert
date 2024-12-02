@@ -1,0 +1,69 @@
+{
+	"HomePage": {
+		"title": "Hello world!"
+	},
+	"SignIn": {
+		"signIn": "Sign In",
+		"signInTitle": "Sign in to your account",
+		"signingYouIn": "Signing you in...",
+		"signInButton": "Sign in",
+		"emailLabel": "Email address",
+		"emailPlaceholder": "Enter your email",
+		"passwordLabel": "Password",
+		"passwordPlaceholder": "Enter your password",
+		"rememberMe": "Remember me",
+		"forgotPassword": "Forgot password?",
+		"linkSent": "Authorization link sent, check your email",
+		"sendingLink": "Sending link...",
+		"errorSendingLink": "Error occurred while sending the link",
+		"invalidCode": "Invalid code",
+		"loginSuccessful": "Login successful! 🎉",
+		"errorExchangingToken": "Error exchanging token",
+		"errorSigningIn": "Error occurred while signing in"
+	},
+	"Users": {
+		"title": "Users",
+		"createUser": "Create User",
+		"id": "ID",
+		"fullName": "Full Name",
+		"email": "Email",
+		"createdAt": "Created At"
+	},
+	"CreateUser": {
+		"title": "Create New User",
+		"email": "Email",
+		"firstName": "First Name",
+		"lastName": "Last Name",
+		"password": "Password",
+		"confirmPassword": "Confirm Password",
+		"cancel": "Cancel",
+		"create": "Create User",
+		"creating": "Creating...",
+		"errorCreating": "Error occurred while creating the user",
+		"genericError": "An error occurred",
+		"successCreating": "User created successfully",
+		"errorSendingLink": "Error occurred while sending the link",
+		"errorExchangingToken": "Error occurred while exchanging the token",
+		"role": "Role",
+		"selectRole": "Select Role",
+		"admin": "Admin",
+		"guest": "Guest",
+		"moderator": "Moderator"
+	},
+	"Menu": {
+		"home": "Home",
+		"users": "Users"
+	},
+	"Profile": {
+		"signOut": "Sign out",
+		"signedOut": "Signed out successfully"
+	},
+	"Pages": {
+		"NotFound": {
+			"errorCode": "404",
+			"title": "Oops! The page you're looking for doesn't exist.",
+			"description": "It might have been moved or deleted, or perhaps you mistyped the URL.",
+			"homeButton": "Go Back Home"
+		}
+	}
+}

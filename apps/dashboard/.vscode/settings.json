@@ -1,0 +1,62 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.addMissingImports": "explicit"
+  },
+  "files.insertFinalNewline": true,
+  "[handlebars]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
+  },
+  // Override spellings in workspace
+  "cSpell.words": [
+    "biomejs",
+    "clsx",
+    "codegen",
+    "connectrpc",
+    "copyfiles",
+    "datepicker",
+    "dbmate",
+    "dtos",
+    "fastify",
+    "flowbite",
+    "graphiql",
+    "heroicons",
+    "jwks",
+    "KSUID",
+    "marginable",
+    "mercurius",
+    "nanos",
+    "newco",
+    "noauth",
+    "noopen",
+    "nosniff",
+    "oidc",
+    "opentelemetry",
+    "pino",
+    "pkce",
+    "precommit",
+    "publishconfig",
+    "rebalancing",
+    "sameorigin",
+    "subresource",
+    "testid"
+  ],
+  // TypeScript
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "sonarlint.connectedMode.project": {
+    "connectionId": "quantum-wealth",
+    "projectKey": "quantum-wealth_experience-api"
+  },
+  "[proto3]": {
+    "editor.defaultFormatter": "bufbuild.vscode-buf"
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}

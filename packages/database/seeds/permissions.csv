@@ -1,0 +1,13 @@
+roleId,action
+c21c5c61-64c6-4c26-9b98-5cf8ef5d1a39,create_user
+c21c5c61-64c6-4c26-9b98-5cf8ef5d1a39,update_user
+c21c5c61-64c6-4c26-9b98-5cf8ef5d1a39,delete_user
+c21c5c61-64c6-4c26-9b98-5cf8ef5d1a39,suspend_user
+c21c5c61-64c6-4c26-9b98-5cf8ef5d1a39,view_all_users
+c21c5c61-64c6-4c26-9b98-5cf8ef5d1a39,manage_roles
+c21c5c61-64c6-4c26-9b98-5cf8ef5d1a39,manage_permissions
+c21c5c61-64c6-4c26-9b98-5cf8ef5d1a39,view_system_logs
+c4c18f76-a943-4d12-9766-1a9cb6398b11,view_all_users
+c4c18f76-a943-4d12-9766-1a9cb6398b11,suspend_user
+c4c18f76-a943-4d12-9766-1a9cb6398b11,update_user
+a8f7d37c-8544-4907-ab6d-1a5adb43dd91,view_own_profile
