@@ -25,16 +25,23 @@ function UsersPage() {
     },
   })
 
-  const { callAction: callDeleteUser, isPending: isDeletingUser } = useServerAction(deleteUserAction, {
-    onSuccess() {
-      toast.success(t("successDeleting"))
-      setShowDialog(false)
+  const { callAction: callDeleteUser, isPending: isDeletingUser } = useServerAction(
+    deleteUserAction,
+    {
+      onSuccess() {
+        toast.success(t("successDeleting"))
+        setShowDialog(false)
+      },
     },
-  })
+  )
 
-  useSingleEffect(() => {
-    callGetActiveUsers()
-  }, [], [])
+  useSingleEffect(
+    () => {
+      callGetActiveUsers()
+    },
+    [],
+    [],
+  )
 
   const t = useTranslations("Users")
 
@@ -56,23 +63,32 @@ function UsersPage() {
               <th>{t("fullName")}</th>
               <th>{t("email")}</th>
               <th>{t("createdAt")}</th>
-              <th>{t("actions")}</th>
+              <th className="text-right">{t("actions")}</th>
             </tr>
           </thead>
           <tbody>
             {users.map((user) => (
               <tr key={user.id}>
-                <td>{user.id}</td>
+                <td>
+                  <Link
+                    href={`/users/${user.id}`}
+                    className="text-secondary font-bold hover:underline"
+                  >
+                    {user.id}
+                  </Link>
+                </td>
                 <td>
                   {user.firstName} {user.lastName}
                 </td>
                 <td>{user.email}</td>
                 <td>{moment(user.createdAt).format(DATE_FORMAT)}</td>
                 <td>
-                  <div className="flex gap-2">
-                    <LoadingButtonComponent className="btn-warning" isLoading={false}>
-                      <EditIcon />
-                    </LoadingButtonComponent>
+                  <div className="flex gap-2 justify-end">
+                    <Link href={`/users/${user.id}?edit=true`}> {/* editUrl('users', 'id')*/}
+                      <LoadingButtonComponent className="btn-warning" isLoading={false}>
+                        <EditIcon />
+                      </LoadingButtonComponent>
+                    </Link>
                     <LoadingButtonComponent
                       className="btn-error"
                       onClick={() => {
@@ -105,4 +121,4 @@ function UsersPage() {
   )
 }
 
-export default withPermission("VIEW_ALL_USERS", UsersPage)
+export default withPermission(["VIEW_ALL_USERS"], UsersPage)

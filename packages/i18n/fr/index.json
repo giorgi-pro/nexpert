@@ -27,7 +27,9 @@
 		"id": "ID",
 		"fullName": "Nom complet",
 		"email": "E-mail",
-		"createdAt": "Créé le"
+		"createdAt": "Créé le",
+		"actions": "Actions",
+		"successDeleting": "Utilisateur supprimé avec succès"
 	},
 	"CreateUser": {
 		"title": "Créer un nouvel utilisateur",
@@ -65,5 +67,35 @@
 			"description": "Elle a peut-être été déplacée ou supprimée, ou vous avez peut-être mal tapé l'URL.",
 			"homeButton": "Retourner à l'accueil"
 		}
+	},
+	"EditUser": {
+		"title": "Modifier l'utilisateur",
+		"email": "E-mail",
+		"firstName": "Prénom",
+		"lastName": "Nom",
+		"cancel": "Annuler",
+		"save": "Enregistrer les modifications",
+		"saving": "Enregistrement...",
+		"errorEditing": "Une erreur s'est produite lors de la modification de l'utilisateur",
+		"genericError": "Une erreur s'est produite",
+		"successEditing": "Utilisateur mis à jour avec succès",
+		"errorLoading": "Erreur lors du chargement des données de l'utilisateur",
+		"userNotFound": "Utilisateur non trouvé",
+		"role": "Rôle",
+		"selectRole": "Sélectionner un rôle",
+		"admin": "Administrateur",
+		"guest": "Invité",
+		"moderator": "Modérateur"
+	},
+	"UserDetails": {
+		"title": "Détails de l'utilisateur",
+		"id": "ID",
+		"email": "E-mail",
+		"fullName": "Nom complet",
+		"back": "Retour aux utilisateurs",
+		"errorLoading": "Erreur lors du chargement des données de l'utilisateur",
+		"userNotFound": "Utilisateur non trouvé",
+		"role": "Rôle",
+		"permissions": "Permissions"
 	}
 }

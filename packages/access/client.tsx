@@ -11,7 +11,7 @@ type WithAccessPageOptions = {
 }
 
 export function withPermission<T extends object>(
-  permission: Permission,
+  permissions: Permission[],
   PageComponent: React.ComponentType<T>,
   options: WithAccessPageOptions = {
     LoadingComponent: PageLoadingComponent,
@@ -24,7 +24,7 @@ export function withPermission<T extends object>(
     const session = useSession()
     const router = useRouter()
 
-    if (session.data?.user?.permissions.includes(PERMISSIONS[permission])) {
+    if (permissions.every((permission) => session.data?.user?.permissions.includes(PERMISSIONS[permission]))) {
       return <PageComponent {...props} />
     }
 

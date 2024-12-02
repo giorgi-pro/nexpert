@@ -29,10 +29,14 @@ export default function DialogComponent(props: DialogComponentProps) {
           <h3 className="text-xl font-normal text-gray-500 mt-5 mb-6">{props.title}</h3>
           <p className="text-gray-500 mb-6">{props.content}</p>
           <div className="flex gap-2 justify-end">
-            <ActionButton className="btn-secondary" onClick={props.onCancel}>
+            <button
+              type="button"
+              onClick={props.onCancel}
+              className="btn btn-ghost text-secondary"
+            >
               No
-            </ActionButton>
-            <ActionButton className="btn-warning" onClick={props.onConfirm}>
+            </button>
+            <ActionButton className="btn-primary" onClick={props.onConfirm}>
               Yes
             </ActionButton>
           </div>

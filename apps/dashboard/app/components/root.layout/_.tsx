@@ -3,6 +3,7 @@
 import MenuComponent from "~/components/menu.component"
 import Footer from "~/components/footer"
 import Header from "~/components/header"
+import ErrorBoundaryComponent from "@repo/ui/components/error-boundary.component"
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
@@ -14,7 +15,9 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         <div className="border-b-1">
           <Header />
         </div>
-        <section className="relative h-full p-4">{props.children}</section>
+        <ErrorBoundaryComponent>
+          <section className="relative h-full p-4">{props.children}</section>
+        </ErrorBoundaryComponent>
         <Footer />
       </div>
     </div>

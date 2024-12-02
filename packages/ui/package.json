@@ -13,7 +13,11 @@
 		"@repo/config": "*",
 		"@repo/env": "*",
 		"@repo/i18n": "*",
-		"convict": "^6.2.4",
+		"react": "19.0.0-rc-66855b96-20241106",
+		"react-dom": "19.0.0-rc-66855b96-20241106",
+		"react-hook-form": "^7.53.2",
+		"react-hot-toast": "^2.4.1",
+		"server-only": "^0.0.1",
 		"tailwindcss": "^3.4.15",
 		"zod": "^3.23.8"
 	},

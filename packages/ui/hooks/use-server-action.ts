@@ -8,6 +8,7 @@ export type ActionStatus = "idle" | "pending" | "success" | "error"
 const MINIMUM_ACTION_DELAY = 500
 
 interface ServerActionOptions<A extends (...args: any[]) => any> {
+  autoLoad?: boolean
   onSuccess?: (data: Awaited<ReturnType<A>>) => void
   onError?: (error: unknown) => void
   onSettled?: () => void

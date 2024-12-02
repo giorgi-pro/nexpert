@@ -67,5 +67,38 @@
 			"description": "It might have been moved or deleted, or perhaps you mistyped the URL.",
 			"homeButton": "Go Back Home"
 		}
+	},
+	"EditUser": {
+		"title": "Edit User",
+		"email": "Email",
+		"firstName": "First Name",
+		"lastName": "Last Name",
+		"cancel": "Cancel",
+		"save": "Save Changes",
+		"saving": "Saving...",
+		"errorEditing": "Error occurred while editing the user",
+		"genericError": "An error occurred",
+		"successEditing": "User updated successfully",
+		"errorLoading": "Error loading user data",
+		"userNotFound": "User not found",
+		"role": "Role",
+		"selectRole": "Select Role",
+		"admin": "Admin",
+		"guest": "Guest",
+		"moderator": "Moderator"
+	},
+	"UserDetails": {
+		"title": "User Details",
+		"id": "ID",
+		"email": "Email",
+		"fullName": "Full Name",
+		"back": "Back to Users",
+		"errorLoading": "Error loading user data",
+		"userNotFound": "User not found",
+		"role": "Role",
+		"permissions": "Permissions",
+		"admin": "Admin",
+		"guest": "Guest",
+		"moderator": "Moderator"
 	}
 }
